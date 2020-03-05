@@ -32,9 +32,13 @@ char *adivina(void)= {
 
 //Prototipo de funciones
 const char* get_random_word(void);
+
 void clearscreen(){
     system("@cls||clear");
 }
+
+
+
 
 int main (void){
     menu:
