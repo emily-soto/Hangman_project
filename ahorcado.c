@@ -10,6 +10,14 @@
 #include<time.h>
 #include<stdlib.h>
 
+//macros
+#define MAX_WORDS 23
+
+//Variables Globales
+void imprimir (int oport, char *wordserr, char *word);
+int found_word(char letra);
+int exist_word(char letra);
+int aciertos;
 //Prototipo de funciones
 
 void clearscreen(){
