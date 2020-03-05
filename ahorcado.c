@@ -63,5 +63,22 @@ int main (void){
         clearscreen();
         exit(0);
     }
-    return 0;
+     if (seleccion==1){
+        char nombre[20];
+        clearscreen();
+        printf("\n\n Ingrese su nombre o alias\n\n\t");
+        scanf("%s", nombre);
+        clearscreen();
+        printf("\nJugador: %s\n");
+               
+      }
+
+    printf("Para regresar al menu principal seleccione '0'\n");
+    int opcion;
+    scanf("%d", &opcion);
+    if (opcion==0){
+        goto menu;
+    }
+        return 0 ;
 }
+ 
