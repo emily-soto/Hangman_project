@@ -69,7 +69,7 @@ int main (void){
         printf("\n\n Ingrese su nombre o alias\n\n\t");
         scanf("%s", nombre);
         clearscreen();
-        printf("\nJugador: %s\n");
+        printf("\nJugador: %s\n", nombre);
                
       }
 
