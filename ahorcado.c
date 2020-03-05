@@ -18,8 +18,20 @@ void imprimir (int oport, char *wordserr, char *word);
 int found_word(char letra);
 int exist_word(char letra);
 int aciertos;
-//Prototipo de funciones
 
+//Cambiamos la opcion dada por marcos y colocamos palabras random
+char *adivina(void)= {
+    char *palabras[]={"resiliente", "inefable", "serendipia", "limerencia", "aurora", "efimero", "inmarcesible", "sempiterno", "petricor", "perenne", "nefelibato", "ataraxia", "acendrado", "alba", "armonia", "equilibrio", "libertad", "saudade", "sublime", "esplendor", "chispudo", "chilero", "meraki"};
+    int posicion;
+    srand((unsigned)time(NULL));
+    posicion = rand()%23;
+    return(palabras[posicion]);}
+    
+    char *cadena, word[14], letraserradas[10];
+
+
+//Prototipo de funciones
+const char* get_random_word(void);
 void clearscreen(){
     system("@cls||clear");
 }
