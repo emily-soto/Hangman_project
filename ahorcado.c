@@ -88,9 +88,8 @@ int main (void){
           cubrir[i] = 0;
           }
  
-        int fin_juego = 0;
-       int aciertos=0;
-        while ((! fin_juego)&& (intentos<10)&&(aciertos=0)){
+        int gameover = 0;
+        while ((! gameover)&& (intentos<10) ){
           clearscreen();
         printf("Jugador: %s",nombre);
         intentos=intentos+1; 
@@ -122,27 +121,29 @@ int main (void){
   
  
       // Determine whether the player has won!
-      fin_juego = 1;
+      gameover = 1;
       for(int m = 0; m < lengthw; ++m) {
         if (!cubrir[m]) {
-          fin_juego = 0;
+          gameover = 0;
           break;
         }
       }
     }
-  
-   }
- 
-    // Print victory message!
-    printf("\nGanaste! La palabra era \"%s\".\n", palabrarand);
- 
+    if(aciertos==lengthw){
+  printf("\nGanaste! La palabra era \"%s\".\n", palabrarand);
     }
- 
-  printf("\nPara regresar al menu principal seleccione '0'\n");
+   else{
+  printf("\n¡Perdiste! La palabra era \"%s\".\n", palabrarand);
+   }  
+   }
+   }
+    printf("\nPara regresar al menu principal seleccione '0'\n");
     int opcion;
     scanf("%d", &opcion);
     if (opcion==0){
         goto menu;
     }
-return 0;          
-      }
+return 0;  
+    }
+
+  
