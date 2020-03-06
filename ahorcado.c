@@ -47,13 +47,19 @@ void clearscreen(){
 int main (void){
     menu:
     clearscreen();
-    printf("=========== HANGMAN MENU ===========\n\n");
+    printf("             _  _\n");
+    printf("            (.)(.) \n");
+    printf("           |  ()  | \n");
+    printf("         _ | '--' | _ \n");
+    printf("        {   '-`""""`-'   }\n");
+    printf("==============================\n\n");
     printf("1: Para empezar el juego\n");
     printf("2: Para ver las instrucciones\n");
     printf("3: Para conocernos\n");
     printf("4: Para salir del juego\n\n");
  
     printf("Ingrese su seleccion\n");
+    
 //definicion de variables de menu
     int seleccion;
     scanf("%d", &seleccion);
