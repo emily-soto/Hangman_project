@@ -20,25 +20,32 @@ int exist_word(char letra);
 int aciertos;
 
 //Cambiamos la opcion dada por marcos y colocamos palabras random
-char *adivina(void)= {
-    char *palabras[]={"resiliente", "inefable", "serendipia", "limerencia", "aurora", "efimero", "inmarcesible", "sempiterno", "petricor", "perenne", "nefelibato", "ataraxia", "acendrado", "alba", "armonia", "equilibrio", "libertad", "saudade", "sublime", "esplendor", "chispudo", "chilero", "meraki"};
-    int posicion;
-    srand((unsigned)time(NULL));
-    posicion = rand()%23;
-    return(palabras[posicion]);}
-    
-    char *cadena, word[14], letraserradas[10];
 
 
 //Prototipo de funciones
-const char* get_random_word(void);
+
+
+const char *word_collection[MAX_WORDS]= {
+            "resiliente", "inefable", "serendipia", "limerencia", 
+            "aurora", "efimero", "inmarcesible", "sempiterno", 
+            "petricor", "perenne", "nefelibato", "ataraxia", "acendrado",
+            "alba", "armonia", "equilibrio", "libertad", "saudade", "sublime", 
+            "esplendor", "chispudo", "chilero", "meraki"
+
+};
+
+const char* get_random_word(void){
+    // seed the random generator.
+    srand ( time (0) );
+    // obtain a 0 < randon number < MAX_WORDS
+    int random_position = rand() % MAX_WORDS;
+    //printf("Random number is: %i\n", random_position);
+    return word_collection[random_position];
+}
 
 void clearscreen(){
     system("@cls||clear");
 }
-
-
-
 
 int main (void){
     menu:
@@ -67,17 +74,28 @@ int main (void){
         clearscreen();
         exit(0);
     }
-     if (seleccion==1){
+   if (seleccion==1){
         char nombre[20];
+        const char* palabrarand=get_random_word();
+        int lengthw;
         clearscreen();
         printf("\n\n Ingrese su nombre o alias\n\n\t");
         scanf("%s", nombre);
         clearscreen();
         printf("\nJugador: %s\n", nombre);
-               
+        printf("\n\nLenght %ld\n\n",strlen(palabrarand));
+        lengthw=strlen(palabrarand);
+        for (int i=1; i<=lengthw; i++){
+            printf("_");
+            printf(" ");
+        }
+    }
+      
+        //usar un while con dos if (&&)
+          
       }
 
-    printf("Para regresar al menu principal seleccione '0'\n");
+    printf("\nPara regresar al menu principal seleccione '0'\n");
     int opcion;
     scanf("%d", &opcion);
     if (opcion==0){
@@ -85,4 +103,3 @@ int main (void){
     }
         return 0 ;
 }
- 
