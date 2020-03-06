@@ -89,7 +89,8 @@ int main (void){
           }
  
         int fin_juego = 0;
-        while ((! fin_juego)&& (intentos<10) ){
+       int aciertos=0;
+        while ((! fin_juego)&& (intentos<10)&&(aciertos=0)){
           clearscreen();
         printf("Jugador: %s",nombre);
         intentos=intentos+1; 
