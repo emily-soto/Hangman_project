@@ -90,16 +90,12 @@ int main (void){
             printf(" ");
         }
     }
-      
-        //usar un while con dos if (&&)
-          
-      }
-
-    printf("\nPara regresar al menu principal seleccione '0'\n");
+      printf("\nPara regresar al menu principal seleccione '0'\n");
     int opcion;
     scanf("%d", &opcion);
     if (opcion==0){
         goto menu;
     }
-        return 0 ;
-}
+return 0;          
+      } 
+      
