@@ -2,51 +2,48 @@
     Emily Soto 
     Madeline Salguero
 */
-
+ 
 //librerias
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
 #include<stdlib.h>
-
+ 
 //macros
 #define MAX_WORDS 23
-
+ 
 //Variables Globales
 void imprimir (int oport, char *wordserr, char *word);
 int found_word(char letra);
 int exist_word(char letra);
 int aciertos;
-
+ 
 //Cambiamos la opcion dada por marcos y colocamos palabras random
-
-
+ 
+ 
 //Prototipo de funciones
-
-
+ 
+ 
 const char *word_collection[MAX_WORDS]= {
             "resiliente", "inefable", "serendipia", "limerencia", 
             "aurora", "efimero", "inmarcesible", "sempiterno", 
             "petricor", "perenne", "nefelibato", "ataraxia", "acendrado",
             "alba", "armonia", "equilibrio", "libertad", "saudade", "sublime", 
             "esplendor", "chispudo", "chilero", "meraki"
-
+ 
 };
-
+ 
 const char* get_random_word(void){
-    // seed the random generator.
     srand ( time (0) );
-    // obtain a 0 < randon number < MAX_WORDS
     int random_position = rand() % MAX_WORDS;
-    //printf("Random number is: %i\n", random_position);
     return word_collection[random_position];
 }
-
+ 
 void clearscreen(){
     system("@cls||clear");
 }
-
+ 
 int main (void){
     menu:
     clearscreen();
@@ -55,7 +52,7 @@ int main (void){
     printf("2: Para ver las instrucciones\n");
     printf("3: Para conocernos\n");
     printf("4: Para salir del juego\n\n");
-
+ 
     printf("Ingrese su seleccion\n");
 //definicion de variables de menu
     int seleccion;
@@ -76,26 +73,75 @@ int main (void){
     }
    if (seleccion==1){
         char nombre[20];
+        int intentos=0;
         const char* palabrarand=get_random_word();
-        int lengthw;
+        int lengthw=strlen(palabrarand);
+        char letra[50];
+        int cubrir[lengthw];
         clearscreen();
         printf("\n\n Ingrese su nombre o alias\n\n\t");
         scanf("%s", nombre);
         clearscreen();
-        printf("\nJugador: %s\n", nombre);
+        
         printf("\n\nLenght %ld\n\n",strlen(palabrarand));
-        lengthw=strlen(palabrarand);
-        for (int i=1; i<=lengthw; i++){
-            printf("_");
-            printf(" ");
+        for (int i=0; i < lengthw; ++i) {
+          cubrir[i] = 0;
+          }
+ 
+        int fin_juego = 0;
+        while ((! fin_juego)&& (intentos<10) ){
+          clearscreen();
+        printf("Jugador: %s",nombre);
+        intentos=intentos+1; 
+        printf("\nIntentos: %d/10", intentos);         
+      
+          printf("\nDescifra la palabra:\n\n\n\t");
+          for(int j=0; j < lengthw; ++j) {
+            if (cubrir[j]) {
+              //printf("%i", mask[j]);
+              printf("%c", palabrarand[j]);
+            }
+            else {
+              printf(" _ ");
+            }
+          }
+          printf("\n");
+ 
+          char guess;
+       
+      printf("\n\nIngresa la letra/palabra: ");
+      fflush(stdout);
+      scanf(" %c", &guess);
+ 
+      // Marcar como verdaderas las posiciones adivinadas
+      for(int k=0; k < lengthw; ++k) {
+        if (palabrarand[k] == guess) {
+    cubrir[k] = 1;
         }
+  
+ 
+      // Determine whether the player has won!
+      fin_juego = 1;
+      for(int m = 0; m < lengthw; ++m) {
+        if (!cubrir[m]) {
+          fin_juego = 0;
+          break;
+        }
+      }
     }
-      printf("\nPara regresar al menu principal seleccione '0'\n");
+  
+   }
+ 
+    // Print victory message!
+    printf("\nGanaste! La palabra era \"%s\".\n", palabrarand);
+ 
+    }
+ 
+  printf("\nPara regresar al menu principal seleccione '0'\n");
     int opcion;
     scanf("%d", &opcion);
     if (opcion==0){
         goto menu;
     }
 return 0;          
-      } 
-      
+      }
