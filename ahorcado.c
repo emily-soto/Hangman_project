@@ -89,11 +89,12 @@ int main (void){
           }
  
         int gameover = 0;
-        while ((! gameover)&& (intentos<10) ){
+        while ((! gameover)&& (intentos<10)&& (aciertos!= lengthw) ){
           clearscreen();
         printf("Jugador: %s",nombre);
         intentos=intentos+1; 
-        printf("\nIntentos: %d/10", intentos);         
+        printf("\nIntentos: %d/10", intentos); 
+        printf("\nAciertos: %d", aciertos);        
       
           printf("\nDescifra la palabra:\n\n\n\t");
           for(int j=0; j < lengthw; ++j) {
@@ -113,12 +114,18 @@ int main (void){
       fflush(stdout);
       scanf(" %c", &guess);
  
+ //Aciertos en el juego
+ for (int i = 0; i < lengthw; i++) {
+            if (guess == palabrarand[i]) {
+                cubrir[i] = guess;
+                aciertos++;
+                } else {}
+        }
       // Marcar como verdaderas las posiciones adivinadas
       for(int k=0; k < lengthw; ++k) {
         if (palabrarand[k] == guess) {
     cubrir[k] = 1;
         }
-  
  
       // Determine whether the player has won!
       gameover = 1;
