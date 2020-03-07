@@ -74,7 +74,7 @@ int main (void){
         clearscreen();
         printf("INSTRUCCIONES\n\n");
         printf("El objetivo del juego es descifrar la palabra oculta adivinando la mayor cantidad de letras por las que esta compuesta. El jugador cuenta con 10 intentos, en los cuales debe ingresar una letra o palabra (*cada letra equivale a un intento), si la palabra contiene la seleccion entonces se le mostrara la posicion de esta y la cantidad de veces que se repite la letra; por otro lado, si el jugador ingresa una letra que no conforma la palabra, el jugador pierde un turno y debe volver a intentar adivinar. Si la seleccion es una palabra y esta es correcta, entonces el jugador ganara y el juego termina.Si el jugador descifra la palabra durante los diez intentos, ganara la partida.\n\n ");
-        printf("*Si se ingresa una palabra, cada letra de la palabra equivale a un intento. Por ejemplo la palabra ?'sol', sumaría 3 intentos.");
+        printf("*Si se ingresa una palabra, cada letra de la palabra equivale a un intento. Por ejemplo la palabra 'sol', sumaría 3 intentos.\n\n");
         }
         
     if (seleccion==3){
