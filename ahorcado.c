@@ -47,17 +47,26 @@ void clearscreen(){
 int main (void){
    menu:
     clearscreen();
+    //Agregue color
+       printf("\033[1;34m");
     printf("00   00    111    0000   00  1111111\n");
     printf("0000000  1111111  000 00 00  111  __\n");
     printf("00   00  11   11  000   000  1111111\n\n");
+    printf("\033[0m");
+    //cambie el color
+        printf("\033[0;35m");
     printf("   111   111     000    1111   11\n");
-     printf("   1111 1111   0000000  111 11 11\n");
-       printf("  111 11  111  00   00  111   111\n");
+    printf("   1111 1111   0000000  111 11 11\n");
+    printf("  111 11  111  00   00  111   111\n");
+        printf("\033[0m");
+        //Nuevo color
+      printf("\033[0;36m");
     printf("                _  _\n");
     printf("               (x)(x) \n");
     printf("              |  ()  | \n");
     printf("            _ | '--' | _ \n");
     printf("           {   '-`""""`-'   }\n");
+            printf("\033[0m");
     printf("=====================================\n\n");
     printf("\t 1: Para empezar el juego\n");
     printf("\t 2: Para ver las instrucciones\n");
@@ -159,13 +168,12 @@ int main (void){
    }  
    }
    }
-    printf("\nPara regresar al menu principal seleccione '0'\n");
-    int opcion;
-    scanf("%d", &opcion);
-    if (opcion==0){
-        goto menu;
-    }
+  printf("\nPara regresar al menu principal seleccione 'ENTER'\n");
+      char noimporta[3];
+      fgets(noimporta, 3, stdin);
+      fgets(noimporta, 3, stdin);
+        clearscreen();
+         goto menu;
+
 return 0;  
     }
-
-  
