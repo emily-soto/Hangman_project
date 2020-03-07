@@ -45,20 +45,27 @@ void clearscreen(){
 }
  
 int main (void){
-    menu:
+   menu:
     clearscreen();
-    printf("             _  _\n");
-    printf("            (.)(.) \n");
-    printf("           |  ()  | \n");
-    printf("         _ | '--' | _ \n");
-    printf("        {   '-`""""`-'   }\n");
-    printf("==============================\n\n");
-    printf("1: Para empezar el juego\n");
-    printf("2: Para ver las instrucciones\n");
-    printf("3: Para conocernos\n");
-    printf("4: Para salir del juego\n\n");
+    printf("00   00    111    0000   00  1111111\n");
+    printf("0000000  1111111  000 00 00  111  __\n");
+    printf("00   00  11   11  000   000  1111111\n\n");
+    printf("   111   111     000    1111   11\n");
+     printf("   1111 1111   0000000  111 11 11\n");
+       printf("  111 11  111  00   00  111   111\n");
+    printf("                _  _\n");
+    printf("               (x)(x) \n");
+    printf("              |  ()  | \n");
+    printf("            _ | '--' | _ \n");
+    printf("           {   '-`""""`-'   }\n");
+    printf("=====================================\n\n");
+    printf("\t 1: Para empezar el juego\n");
+    printf("\t 2: Para ver las instrucciones\n");
+    printf("\t 3: Para conocernos\n");
+    printf("\t 4: Para salir del juego\n\n");
+    printf("______________________________________\n");
  
-    printf("Ingrese su seleccion\n");
+    printf("\nIngrese su seleccion:\n");
     
 //definicion de variables de menu
     int seleccion;
