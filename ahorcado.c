@@ -105,9 +105,9 @@ int main (void){
         while ((! gameover)&& (intentos<10)&& (aciertos!= lengthw) ){
           clearscreen();
         printf("Jugador: %s",nombre);
-        intentos=intentos+1; 
         printf("\nIntentos: %d/10", intentos); 
-        printf("\nAciertos: %d", aciertos);        
+        printf("\nAciertos: %d\n", aciertos);    
+        intentos=intentos+1; 
       
           printf("\nDescifra la palabra:\n\n\n\t");
           for(int j=0; j < lengthw; ++j) {
