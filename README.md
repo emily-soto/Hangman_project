@@ -1,5 +1,5 @@
 # Hangman_project
-# Hangman_project
+
 HANGMAN
 
 Como correr el juego
@@ -16,8 +16,10 @@ Navegación del Menu
   _____________________________________________________
 Extra Information
 El juego funciona con los requerimentos necesarios para que funcione y además cuenta con color .
-
+____________________________________________________________
 About
 creadores:
-Emily Soto  emilysoto@ufm.edu estudiante de ingenieria empresarial
+
+Emily Soto  emilysoto@ufm.edu Estudiante de ingenieria empresarial
+
 Madeline Salguero madelinesg@ufm.edu  Estudiante de ingenieria empresarial
