@@ -17,7 +17,6 @@
 void imprimir (int oport, char *wordserr, char *word);
 int found_word(char letra);
 int exist_word(char letra);
-int aciertos;
  
 //Cambiamos la opcion dada por marcos y colocamos palabras random
  
@@ -106,6 +105,7 @@ int main (void){
    if (seleccion==1){
         char nombre[20];
         int intentos=0;
+        int aciertos=0;
         const char* palabrarand=get_random_word();
         int lengthw=strlen(palabrarand);
         char letra[50];
