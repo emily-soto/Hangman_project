@@ -133,10 +133,19 @@ int main (void){
           printf("\n");
  
           char guess;
-       
-      printf("\n\nIngresa la letra/palabra: ");
-      fflush(stdout);
+          int decision;
+       printf("\n Seleccione '0' si desea salir del juego o Seleccione 1 para jugar:");
+      printf("\n\nIngresa la letra/palabra:  ");
+     
+      scanf("%i", &decision);
+      if(decision==0){
+         clearscreen();
+        exit(0);
+      }
+      if(decision== 1){
+         fflush(stdout);
       scanf(" %c", &guess);
+      
  
  //Aciertos en el juego
  for (int i = 0; i < lengthw; i++) {
@@ -168,7 +177,8 @@ int main (void){
    }  
    }
    }
-  printf("\nPara regresar al menu principal seleccione 'ENTER'\n");
+   }
+  printf("\nPara regresar al menu principal precione 'ENTER'\n");
       char noimporta[3];
       fgets(noimporta, 3, stdin);
       fgets(noimporta, 3, stdin);
