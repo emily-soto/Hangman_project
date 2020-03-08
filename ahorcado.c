@@ -187,3 +187,7 @@ int main (void){
 
 return 0;  
     }
+
+/*Nos falta ver porque siempre imprime perdiste 
+que se salga solo con presionar cero
+
