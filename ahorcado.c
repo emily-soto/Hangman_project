@@ -189,5 +189,6 @@ return 0;
     }
 
 /*Nos falta ver porque siempre imprime perdiste 
-que se salga solo con presionar cero
+que se salga solo con presionar 
+al volver a jugar acumula los aciertos del juego anterior*/
 
