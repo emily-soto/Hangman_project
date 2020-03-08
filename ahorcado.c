@@ -134,16 +134,16 @@ int main (void){
           printf("\n");
  
           char guess;
-          int decision;
-       printf("\n Seleccione '0' si desea salir del juego o Seleccione 1 para jugar:");
+          char decision;
+       printf("\n Seleccione '0' si desea salir del juego:");
       printf("\n\nIngresa la letra/palabra:  ");
      
-      scanf("%i", &decision);
+      scanf("%c", &decision);
       if(decision==0){
          clearscreen();
         exit(0);
       }
-      if(decision== 1){
+      if(decision!=0){
          fflush(stdout);
       scanf(" %c", &guess);
       
@@ -190,6 +190,4 @@ return 0;
     }
 
 /*Nos falta ver porque siempre imprime perdiste 
-que se salga solo con presionar 
 */
-
