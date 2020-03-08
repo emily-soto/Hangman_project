@@ -102,6 +102,7 @@ int main (void){
         int lengthw=strlen(palabrarand);
         char letra[50];
         int cubrir[lengthw];
+        aciertos =0;
         clearscreen();
         printf("\n\n Ingrese su nombre o alias\n\n\t");
         scanf("%s", nombre);
@@ -190,5 +191,5 @@ return 0;
 
 /*Nos falta ver porque siempre imprime perdiste 
 que se salga solo con presionar 
-al volver a jugar acumula los aciertos del juego anterior*/
+*/
 
