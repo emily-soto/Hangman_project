@@ -45,7 +45,7 @@ void clearscreen(){
 }
  
 int main (void){
-     menu:
+   menu:
     clearscreen();
     //Agregue color
        printf("\033[1;32m");
@@ -66,17 +66,18 @@ int main (void){
     printf("              |  ()  | \n");
     printf("            _ | '--' | _ \n");
     printf("           {   '-`""""`-'   }\n");
-      printf("\033[0m");
-      printf("\033[0;36m");
+            printf("\033[0m");
+      printf("\033[1;34m");
     printf("=====================================\n\n");
-        printf("\033[0m");
+      printf("\033[0m");
     printf("\t 1: Para empezar el juego\n");
     printf("\t 2: Para ver las instrucciones\n");
     printf("\t 3: Para conocernos\n");
     printf("\t 4: Para salir del juego\n\n");
-        printf("\033[0;36m");
+      printf("\033[1;34m");
     printf("______________________________________\n");
-     printf("\033[0m");
+      printf("\033[0m");
+ 
     printf("\nIngrese su seleccion:\n");
     
 //definicion de variables de menu
@@ -86,16 +87,16 @@ int main (void){
         clearscreen();
          printf("\033[1;36m");
         printf("INSTRUCCIONES\n\n");
-         printf("\033[0m");
+          printf("\033[0m");
         printf("El objetivo del juego es descifrar la palabra oculta adivinando la mayor cantidad de letras por las que esta compuesta. El jugador cuenta con 10 intentos, en los cuales debe ingresar una letra o palabra (*cada letra equivale a un intento), si la palabra contiene la seleccion entonces se le mostrara la posicion de esta y la cantidad de veces que se repite la letra; por otro lado, si el jugador ingresa una letra que no conforma la palabra, el jugador pierde un turno y debe volver a intentar adivinar. Si la seleccion es una palabra y esta es correcta, entonces el jugador ganara y el juego termina.Si el jugador descifra la palabra durante los diez intentos, ganara la partida.\n\n ");
         printf("*Si se ingresa una palabra, cada letra de la palabra equivale a un intento. Por ejemplo la palabra 'sol', sumaría 3 intentos.\n\n");
         }
         
     if (seleccion==3){
         clearscreen();
-         printf("\033[1;36m");
+          printf("\033[1;36m");
         printf("ABOUT\n\n");
-         printf("\033[0m");
+          printf("\033[0m");
         printf("Desarrolladores:\n Madeline Salguero: madelinesg@ufm.edu\n Emily Soto: emilysoto@ufm.edu\n\n Somos estudiantes de Ingenieria Empresarial de la Universidad Francisco Marroquin. El objetivo de este proyecto es mejorar nuestras habilidades en programacion, a traves del lenguaje de C; esperamos este juego sea entretenido y que aprenda de las palabras elocuentes del lenguaje.\n\n\n");
     }
     if (seleccion==4){
@@ -109,11 +110,10 @@ int main (void){
         int lengthw=strlen(palabrarand);
         char letra[50];
         int cubrir[lengthw];
-        aciertos =0;
         clearscreen();
-         printf("\033[1;36m");
+          printf("\033[1;36m");
         printf("\n\n Ingrese su nombre o alias\n\n\t");
-         printf("\033[0m");
+          printf("\033[0m");
         scanf("%s", nombre);
         clearscreen();
         
@@ -125,11 +125,11 @@ int main (void){
         int gameover = 0;
         while ((! gameover)&& (intentos<10)&& (aciertos!= lengthw) ){
           clearscreen();
-             printf("\033[1;34m");
+            printf("\033[1;36m");
         printf("Jugador: %s",nombre);
         printf("\nIntentos: %d/10", intentos); 
-        printf("\nAciertos: %d\n", aciertos);  
-            printf("\033[0m");    
+        printf("\nAciertos: %d\n", aciertos);
+          printf("\033[0m");    
         intentos=intentos+1; 
       
           printf("\nDescifra la palabra:\n\n\n\t");
@@ -139,27 +139,23 @@ int main (void){
               printf("%c", palabrarand[j]);
             }
             else {
-              printf("\033[0;31m");
+                printf("\033[0;31m");
               printf(" _ ");
-               printf("\033[0m");
+                printf("\033[0m");
             }
           }
           printf("\n");
  
           char guess;
-          char decision;
-       printf("\n Seleccione '0' si desea salir del juego:");
-      printf("\n\nIngresa la letra/palabra:  ");
-     
-      scanf("%c", &decision);
-      if(decision==0){
-         clearscreen();
+       
+      printf("\n\nIngresa la letra/palabra: ");
+      fflush(stdout);
+      scanf(" %c", &guess);
+  
+      if (guess=='0'){
         exit(0);
       }
-      if(decision!=0){
-         fflush(stdout);
-      scanf(" %c", &guess);
-      
+      else{
  
  //Aciertos en el juego
  for (int i = 0; i < lengthw; i++) {
@@ -174,7 +170,7 @@ int main (void){
     cubrir[k] = 1;
         }
  
-      // Determine whether the player has won!
+    //Determinar si gano
       gameover = 1;
       for(int m = 0; m < lengthw; ++m) {
         if (!cubrir[m]) {
@@ -184,19 +180,19 @@ int main (void){
       }
     }
     if(aciertos==lengthw){
-      printf("\033[0;33m");
+      printf("\033[0;31m");
   printf("\nGanaste! La palabra era \"%s\".\n", palabrarand);
-  printf("\033[0m");
+    printf("\033[0m");
     }
    else{
-     printf("\033[0;33m");
+      printf("\033[0;31m");
   printf("\n¡Perdiste! La palabra era \"%s\".\n", palabrarand);
-  printf("\033[0m");
+    printf("\033[0m");
    }  
    }
    }
    }
-  printf("\nPara regresar al menu principal precione 'ENTER'\n");
+  printf("\nPara regresar al menu principal seleccione 'ENTER'\n");
       char noimporta[3];
       fgets(noimporta, 3, stdin);
       fgets(noimporta, 3, stdin);
@@ -205,6 +201,3 @@ int main (void){
 
 return 0;  
     }
-
-/*Nos falta ver porque siempre imprime perdiste 
-*/
