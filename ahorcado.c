@@ -131,6 +131,8 @@ int main (void){
         printf("\nAciertos: %d\n", aciertos);
           printf("\033[0m");    
         intentos=intentos+1; 
+           
+          printf("*Seleccione '0' para salir\n");
       
           printf("\nDescifra la palabra:\n\n\n\t");
           for(int j=0; j < lengthw; ++j) {
