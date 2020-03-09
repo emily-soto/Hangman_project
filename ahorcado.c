@@ -123,7 +123,7 @@ int main (void){
           }
  
         int gameover = 0;
-        while ((! gameover)&& (intentos<10)&& (aciertos!= lengthw) ){
+        while ((! gameover)&& (intentos<=10)&& (aciertos!= lengthw) ){
           clearscreen();
             printf("\033[1;36m");
         printf("Jugador: %s",nombre);
