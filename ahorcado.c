@@ -187,12 +187,12 @@ int main (void){
   printf("\nGanaste! La palabra era \"%s\".\n", palabrarand);
     printf("\033[0m");
     }
-   else{
+      }  
+   }
+     if (aciertos!=lengthw){
       printf("\033[0;31m");
   printf("\n¡Perdiste! La palabra era \"%s\".\n", palabrarand);
     printf("\033[0m");
-   }  
-   }
    }
    }
   printf("\nPara regresar al menu principal seleccione 'ENTER'\n");
