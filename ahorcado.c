@@ -1,3 +1,4 @@
+  
 /*Proyecto Juego de ahorcado
     Emily Soto 
     Madeline Salguero
@@ -185,6 +186,9 @@ int main (void){
     if(aciertos==lengthw){
       printf("\033[0;31m");
   printf("\nGanaste! La palabra era \"%s\".\n", palabrarand);
+  printf("Jugador: %s",nombre);
+        printf("\nIntentos: %d/10", intentos); 
+        printf("\nAciertos: %d\n", aciertos);
     printf("\033[0m");
     }
       }  
@@ -192,6 +196,9 @@ int main (void){
      if (aciertos!=lengthw){
       printf("\033[0;31m");
   printf("\n¡Perdiste! La palabra era \"%s\".\n", palabrarand);
+  printf("Jugador: %s",nombre);
+        printf("\nIntentos: %d/10", intentos); 
+        printf("\nAciertos: %d\n", aciertos);
     printf("\033[0m");
    }
    }
