@@ -161,13 +161,14 @@ int main (void){
       }
       else{
  
- //Aciertos en el juego
+//Aciertos en el juego
  for (int i = 0; i < lengthw; i++) {
-            if (guess == palabrarand[i]) {
+            if (guess == palabrarand[i] && cubrir[i] == 0) {
                 cubrir[i] = guess;
                 aciertos++;
-                } else {}
+                }
         }
+          
       // Marcar como verdaderas las posiciones adivinadas
       for(int k=0; k < lengthw; ++k) {
         if (palabrarand[k] == guess) {
@@ -187,7 +188,7 @@ int main (void){
    }
    if(aciertos==lengthw){
       printf("\033[0;31m");
-  printf("\nGanaste! La palabra era \"%s\".\n", palabrarand);
+  printf("\n¡Ganaste! La palabra era \"%s\".\n", palabrarand);
   printf("Jugador: %s",nombre);
         printf("\nIntentos: %d/10", intentos); 
         printf("\nAciertos: %d\n", aciertos);
@@ -195,7 +196,7 @@ int main (void){
     }
      else if ((aciertos!=lengthw)){
       printf("\033[0;31m");
-      printf("        PERDISTE         \n");
+      printf("\n        PERDISTE         \n");
   printf("\n¡Perdiste! La palabra era \"%s\".\n", palabrarand);
   printf("Jugador: %s",nombre);
         printf("\nIntentos: %d/10", intentos); 
