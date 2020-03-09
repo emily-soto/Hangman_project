@@ -155,6 +155,7 @@ int main (void){
       scanf(" %c", &guess);
   
       if (guess=='0'){
+        clearscreen();
         exit(0);
       }
       else{
