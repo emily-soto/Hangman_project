@@ -25,11 +25,11 @@ int exist_word(char letra);
  
  
 const char *word_collection[MAX_WORDS]= {
-            "resiliente", "inefable", "serendipia", "limerencia", 
-            "aurora", "efimero", "inmarcesible", "sempiterno", 
-            "petricor", "perenne", "nefelibato", "ataraxia", "acendrado",
-            "alba", "armonia", "equilibrio", "libertad", "saudade", "sublime", 
-            "esplendor", "chispudo", "chilero", "meraki"
+            "pilas", "telele", "ulugrun", "fijese", 
+            "atinar", "chancla", "cuchitril", "chilazo", 
+            "pencacear", "shucaque", "tanate", "patatush", "chucho",
+            "ishto", "hijuela", "chinchilete", "patojo", "chunche", "chanchuy", 
+            "mucha", "chispudo", "chilero", "meraki"
  
 };
  
@@ -96,7 +96,7 @@ int main (void){
           printf("\033[1;36m");
         printf("ABOUT\n\n");
           printf("\033[0m");
-        printf("Desarrolladores:\n Madeline Salguero: madelinesg@ufm.edu\n Emily Soto: emilysoto@ufm.edu\n\n Somos estudiantes de Ingenieria Empresarial de la Universidad Francisco Marroquin. El objetivo de este proyecto es mejorar nuestras habilidades en programacion, a traves del lenguaje de C; esperamos este juego sea entretenido y que aprenda de las palabras elocuentes del lenguaje.\n\n\n");
+        printf("Desarrolladores:\n Madeline Salguero: madelinesg@ufm.edu\n Emily Soto: emilysoto@ufm.edu\n\n Somos estudiantes de Ingenieria Empresarial de la Universidad Francisco Marroquin. El objetivo de este proyecto es mejorar nuestras habilidades en programacion, a traves del lenguaje de C; esperamos este juego sea entretenido y que aprenda el lenguaje cotidiano del guatemalteco.\n\n\n");
     }
     if (seleccion==4){
         clearscreen();
