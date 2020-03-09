@@ -29,7 +29,7 @@ const char *word_collection[MAX_WORDS]= {
             "atinar", "chancla", "cuchitril", "chilazo", 
             "pencacear", "shucaque", "tanate", "patatush", "chucho",
             "ishto", "hijuela", "chinchilete", "patojo", "chunche", "chanchuy", 
-            "mucha", "chispudo", "chilero", "meraki"
+            "mucha", "chispudo", "chilero", "trancazo"
  
 };
  
